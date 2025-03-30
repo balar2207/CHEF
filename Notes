@@ -5,4 +5,16 @@ tree
 cd recipes
 vi default.rb
 
+package 'httpd'
+service 'httpd' do
+action [:enable, :start]
+end
+
+
+#creating a html file:
+
+file 'var/www/html/index.html' do
+content 'Welcome!, you have successfully confgured you node'
+end
+
 
